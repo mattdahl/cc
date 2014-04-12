@@ -1,6 +1,7 @@
 <template name="post">
 	<div class="post">
 		<span class="post_title">#{{ post_number }} {{ title }}</span>
+		<img src="img/unstarred_star.png">
 		<div class="dividing_group">
 			<span class="post_body">
 				{{ body }}
@@ -14,7 +15,7 @@
 				Like
 			</div>
 			<div class="like_counter">
-				{{ was_liked_by.length }}
+				{{ likes }}
 			</div>
 			<div class="timestamp">
 				{{ timestamp }}

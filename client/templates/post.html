@@ -1,9 +1,9 @@
 <template name="post">
 	<div class="post">
-		<span class="post_title">{{ title }}</span>
+		<span class="post_title">#{{ post_number }} {{ title }}</span>
 		<div class="dividing_group">
 			<span class="post_body">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aspernatur, explicabo, ea amet id non consequatur maxime nisi quis excepturi aliquid aliquam qui quia omnis eligendi alias illum corporis delectus.
+				{{ body }}
 			</span>
 		</div>
 		<div class="dividing_group">
@@ -14,7 +14,7 @@
 				10
 			</div>
 			<div class="timestamp">
-				timestamp
+				{{ timestamp }}
 			</div>
 		</div>
 		<div class="dividing_group">

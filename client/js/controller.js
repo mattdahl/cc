@@ -1,10 +1,11 @@
 Meteor.startup(function () {
 	Session.set('current_page', 'latest');
-	$('#top').parent().css('background-color', 'transparent');
-	$('#starred').parent().css('background-color', 'transparent');
-	$('#latest').css('padding','10px');
-	$('#top').css('padding','10px');
-	$('#starred').css('padding','10px');
+	$('#top').css('background-color', 'transparent');
+	$('#starred').css('background-color', 'transparent');
+	$('#latest').css('padding','5px 10px');
+	$('#top').css('padding','5px 10px');
+	$('#starred').css('padding','5px 10px');
+	$('#present_submit_dialog').css('padding', '5px 10px');
 });
 
 Template.post_list.posts = function () {

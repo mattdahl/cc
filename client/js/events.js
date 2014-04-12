@@ -5,22 +5,23 @@ Template.header.events = {
 	'click span#latest': function (event, template) {
 		Session.set('current_page', 'latest');
 
-		$('#latest').parent().css('background-color', '#b1b1b1');
-		$('#top').parent().css('background-color', 'transparent');
-		$('#starred').parent().css('background-color', 'transparent');
+		$('#latest').css('background-color', '#b1b1b1');
+		$('#top').css('background-color', 'transparent');
+		$('#starred').css('background-color', 'transparent');
 	},
 	'click span#top': function (event, template) {
 		Session.set('current_page', 'top');
 
-		$('#latest').parent().css('background-color', 'transparent');
-		$('#top').parent().css('background-color', '#b1b1b1');
-		$('#starred').parent().css('background-color', 'transparent');
+		$('#latest').css('background-color', 'transparent');	
+		$('#top').css('background-color', '#b1b1b1');
+		$('#starred').css('background-color', 'transparent');
 	},
 	'click span#starred': function (event, template) {
 		Session.set('current_page', 'starred');
-		$('#latest').parent().css('background-color', 'transparent');
-		$('#top').parent().css('background-color', 'transparent');
-		$('#starred').parent().css('background-color', '#b1b1b1');
+
+		$('#latest').css('background-color', 'transparent');
+		$('#top').css('background-color', 'transparent');
+		$('#starred').css('background-color', '#b1b1b1');
 	},
 	'click span#present_moderator_view': function (event, template) {
 		Session.set('current_page', 'moderator_view');

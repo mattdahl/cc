@@ -42,6 +42,10 @@ input:focus {
 	float: right;
 }
 
+#title {
+	float: left;
+}
+
 header > div {
 	background-color: rgba(255, 255, 255, .8);
 	padding: 10px;

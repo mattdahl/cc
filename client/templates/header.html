@@ -1,23 +1,17 @@
 <template name="header">
 	<header>
 		<div id="upper_header">
-			<h1><a href="#" onclick="window.location.reload(true);">Claremont Confessions</a></h1>
-			<span id="present_submit_dialog">Submit</span>
+			<span id="title"><h1><a href="#" onclick="window.location.reload(true);">Claremont Confessions</a></h1></span>
+			<span id="present_submit_dialog" class="button">Submit</span>
 			<span id="present_moderator_view">Moderate |&nbsp;</span>
 		</div>
 		<div id="lower_header">
 			<span id="left_lower_header">
-				<div class = "button">
-					<span id="latest">Latest</span>
-				</div>
-					&nbsp;
-				<div class = "button">
-					<span id="top">Top</span>
-				</div>
-					&nbsp;
-				<div class = "button">
-					<span id="starred">Starred</span>
-				</div>
+				<span id="latest" class="button">Latest</span>
+				&nbsp;
+				<span id="top" class="button">Top</span>
+				&nbsp;
+				<span id="starred" class="button">Starred</span>
 			</span>
 			<span id="right_lower_header">
 				{{> loginButtons }}

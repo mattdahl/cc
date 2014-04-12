@@ -66,13 +66,13 @@ header span {
 }
 
 #post_container {
-	margin-left: 20%;
-	margin-right: 15%;
+	margin-left: 5%;
+	margin-right: 2%;
 }
 
 div.post {
 	background-color: rgba(255, 255, 255, .8);
-	width: 40%;
+	width: 45%;
 	float: left;
 	vertical-align: top;
 	margin: 10px;

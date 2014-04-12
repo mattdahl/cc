@@ -17,9 +17,9 @@ Deps.autorun(function () {
 
 Template.post_list.posts = function () {
 	switch (Session.get('current_page')) {
-		case 'top':	return Posts.find({}, {sort: {likes: -1, post_number: -1}}); break;
-		case 'latest': return Posts.find({}, {sort: {post_number: -1}}); break;
-		case 'starred': return Posts.find({was_starred_by: {$in: [Meteor.userId()]}}, {sort: {post_number: -1}}); break;
+		case 'top':	return Posts.find({is_approved: true}, {sort: {likes: -1, post_number: -1}}); break;
+		case 'latest': return Posts.find({is_approved: true}, {sort: {post_number: -1}}); break;
+		case 'starred': return Posts.find({is_approved: true, was_starred_by: {$in: [Meteor.userId()]}}, {sort: {post_number: -1}}); break;
 	}
 };
 

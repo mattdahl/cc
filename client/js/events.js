@@ -1,6 +1,7 @@
 Template.header.events = {
 	'click span#present_submit_dialog': function (event, template) {
 		$('#submit_dialog').show();
+		$('#blk_background').show();
 	},
 	'click span#latest': function (event, template) {
 		Session.set('current_page', 'latest');
@@ -49,11 +50,13 @@ Template.submit_dialog.events = {
 		});
 
 		$('#submit_dialog').hide();
+		$('#blk_background').hide();
 
 		template.find('#submission_body').value = '';
 	},
 	'click div.exit_button': function(event,template) {
 		$('#submit_dialog').hide();
+		$('#blk_background').hide();
 	}
 };
 

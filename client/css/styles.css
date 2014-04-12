@@ -41,6 +41,7 @@ input:focus {
 
 #present_submit_dialog, #present_moderator_view {
 	/*float: right;*/
+
 }
 
 #title {
@@ -149,11 +150,24 @@ div.post {
 	margin-left: 20%;
 	margin-right: 20%;
 	padding: 20px;
+	z-index: 10;
 }
 
 #submission_body {
 	width: 90%;
 	height: 250px;
+}
+
+#blk_background {
+	display: none;
+	z-index: 5;
+	background-color: black;
+	opacity: .6;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 .submit {

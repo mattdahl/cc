@@ -150,3 +150,8 @@ div.post {
 	min-height: 35px;
 	overflow: auto;
 }
+
+.star {
+	float: right;
+	cursor: pointer;
+}

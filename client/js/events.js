@@ -32,7 +32,8 @@ Template.submit_dialog.events = {
 			likes: 0,
 			timestamp: (new Date()).toString().substring(0, 21),
 			comments: [],
-			content_warnings: []
+			content_warnings: [],
+			was_starred_by: []
 		});
 
 		$('#submit_dialog').hide();
@@ -74,5 +75,19 @@ Template.post.events = {
 		Posts.update(this._id, {$push: {comments: new_comment}});
 
 		template.find('.comment_input').value = '';
+	},
+	'click img.unstarred': function (event, template) {
+		if (!_.contains(this.was_starred_by, Meteor.user()._id)) {
+			Posts.update(this._id, {
+				$push: {was_starred_by: Meteor.user()._id}
+			});
+		}
+	},
+	'click img.starred': function (event, template) {
+		if (_.contains(this.was_starred_by, Meteor.user()._id)) {
+			Posts.update(this._id, {
+				$pull: {was_starred_by: Meteor.user()._id}
+			});
+		}
 	}
 };

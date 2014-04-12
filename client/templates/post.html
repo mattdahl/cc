@@ -1,7 +1,8 @@
 <template name="post">
 	<div class="post">
 		<span class="post_title">#{{ post_number }} {{ title }}</span>
-		<img src="img/unstarred_star.png">
+		<img class="unstarred star" src="img/unstarred_star.png" style="display: {{ has_unstarred }}">
+		<img class="starred star" src="img/starred_star.png" style="display: {{ has_starred }}">
 		<div class="dividing_group">
 			<span class="post_body">
 				{{ body }}

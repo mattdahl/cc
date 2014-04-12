@@ -38,7 +38,9 @@ Template.post.rendered = function () {
 		if (max_comment_height < 0) {
 			$(element).hide();
 		}
-
-		$(this).parent().find('.seemore').show();
 	});
+
+	if (max_comment_height < 0) {
+		$(this).parent().find('.seemore').show();
+	}
 };

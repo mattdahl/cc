@@ -4,11 +4,5 @@
 
 <body>
 	{{> header}}
-	<div id="posts_container">
-		{{#each posts}}
-			{{> post}}
-		{{else}}
-			No posts yet.
-		{{/each}}
-	</div>
+	{{> post_list}}
 </body>

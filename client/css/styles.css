@@ -245,3 +245,15 @@ div.post {
 	display: none;
 	cursor: pointer;
 }
+
+.content_warning_shield {
+	background-color: #a84848;
+	width: 98%;
+	height: 80px;
+	padding: 1%;
+}
+
+.content_warning_shield > .button {
+	float: right;
+	background-color: transparent;
+}

@@ -46,7 +46,8 @@ Template.submit_dialog.events = {
 			timestamp: (new Date()).toString().substring(0, 21),
 			comments: [],
 			content_warnings: [],
-			was_starred_by: []
+			was_starred_by: [],
+			flagged_words: ['foo']
 		});
 
 		$('#submit_dialog').hide();
@@ -113,6 +114,10 @@ Template.post.events = {
 			$(element).show();
 		});
 		$(template.find('.seemore')).hide();
+	},
+	'click span.show_content': function (event, template) {
+		$(template.find('.content_warning_shield')).hide();
+		$(template.find('.post_content')).show();
 	}
 };
 

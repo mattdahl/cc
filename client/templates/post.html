@@ -1,37 +1,45 @@
 <template name="post">
 	<div class="post">
-		<span class="post_title">#{{ post_number }} {{ title }}</span>
-		<img class="unstarred star" src="img/unstarred_star.png" style="display: {{ has_unstarred }}">
-		<img class="starred star" src="img/starred_star.png" style="display: {{ has_starred }}">
-		<div class="dividing_group">
-			<span class="post_body">
-				{{ body }}
-			</span>
+		<div class="content_warning_shield" style="display: {{ has_flagged_content }}">
+			<span class="post_title">#{{ post_number }}</span>
+			<span class="show_content button">x</span>
+			<br />
+			Warning! This post contains inappropriate content. Click the x to view.
 		</div>
-		<div class="dividing_group">
-			<div class="unlike button" style="display: {{ has_unliked }}">
-				Unlike
+		<div class="post_content" style="display: {{ has_no_flagged_content }}">
+			<span class="post_title">#{{ post_number }}</span>
+			<img class="unstarred star" src="img/unstarred_star.png" style="display: {{ has_unstarred }}">
+			<img class="starred star" src="img/starred_star.png" style="display: {{ has_starred }}">
+			<div class="dividing_group">
+				<span class="post_body">
+					{{ body }}
+				</span>
 			</div>
-			<div class="like button" style="display: {{ has_liked }}">
-				Like
+			<div class="dividing_group">
+				<div class="unlike button" style="display: {{ has_unliked }}">
+					Unlike
+				</div>
+				<div class="like button" style="display: {{ has_liked }}">
+					Like
+				</div>
+				<div class="like_counter">
+					{{ likes }}
+				</div>
+				<div class="timestamp">
+					{{ timestamp }}
+				</div>
 			</div>
-			<div class="like_counter">
-				{{ likes }}
+			<div class="dividing_group">
+				{{#each comments}}
+					{{> comment}}
+				{{/each}}
+				<span class="seemore">See more... <br /></span>
 			</div>
-			<div class="timestamp">
-				{{ timestamp }}
-			</div>
-		</div>
-		<div class="dividing_group">
-			{{#each comments}}
-				{{> comment}}
-			{{/each}}
-			<span class="seemore">See more... <br /></span>
-		</div>
-		<div class="dividing_group">
-			<input type="text" class="comment_input">
-			<div class="comment button">
-				Comment
+			<div class="dividing_group">
+				<input type="text" class="comment_input">
+				<div class="comment button">
+					Comment
+				</div>
 			</div>
 		</div>
 	</div>

@@ -48,3 +48,21 @@ Template.post.rendered = function () {
 Template.header.is_admin = function () {
 	return Meteor.user().is_admin;
 };
+
+Template.post.has_flagged_content = function () {
+	if (this.flagged_words.length) {
+		return 'block';
+	}
+	else {
+		return 'none';
+	}
+};
+
+Template.post.has_no_flagged_content = function () {
+	if (!this.flagged_words.length) {
+		return 'block';
+	}
+	else {
+		return 'none';
+	}
+};

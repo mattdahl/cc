@@ -1,0 +1,36 @@
+<template name="moderator_post">
+	<div class="moderator_post">
+		<div class="post_details">
+			<span class="post_title">#{{ post_number }} {{ title }}</span>
+			<div class="dividing_group">
+				<span class="post_body">
+					{{ body }}
+				</span>
+			</div>
+		</div>
+
+		<hr class="vr">
+
+		<div class="moderator_details">
+			{{#if flagged_words}}
+				This post contains this sensitive content...
+				{{#each flagged_words}}
+					{{ this }},
+				{{/each}}
+			{{/if}}
+			Flag this post as containing... <br />
+			<input type="checkbox"> Profanity <br />
+			<input type="checkbox"> Sexual topics <br />
+			<input type="checkbox"> <input type="text" placeholder="other">
+
+			<div class="dividing_group" style="float: right;">
+				<div class="approve">
+					Approve
+				</div>
+				<div class="reject">
+					Reject
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

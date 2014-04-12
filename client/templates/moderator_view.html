@@ -1,0 +1,9 @@
+<template name="moderator_view">
+	<div id="moderator_view">
+		{{#each posts}}
+			{{> moderator_post}}
+		{{else}}
+			<div class="post">No posts to reivew.</div>
+		{{/each}}
+	</div>
+</template>

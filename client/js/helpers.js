@@ -29,7 +29,3 @@ Template.post.has_unstarred = function () {
 		return 'none';
 	}
 };
-
-/*Template.post.rendered = function () {
-	if (_.comment_details(this.data.was_liked_by))
-}*/

@@ -19,6 +19,11 @@ Template.header.events = {
 		$(template.find('#latest')).css('font-size', '18px');
 		$(template.find('#top')).css('font-size', '18px');
 		$(template.find('#starred')).css('font-size', '22px');
+	},
+	'click span#present_moderator_view': function (event, template) {
+		Session.set('current_page', 'moderator_view');
+		$('#post_container').hide();
+		$('#moderator_view').show();
 	}
 };
 
@@ -89,5 +94,17 @@ Template.post.events = {
 				$pull: {was_starred_by: Meteor.user()._id}
 			});
 		}
+	}
+};
+
+Template.moderator_post.events = {
+	'click div.approve': function (event, template) {
+		Posts.update(this._id, {
+			$set: {is_approved: true}
+		});
+
+	},
+	'click div.reject': function (event, template) {
+		Posts.remove(this._id);
 	}
 };

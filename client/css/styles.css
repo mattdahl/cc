@@ -8,6 +8,13 @@ body {
 	font-family: old_sans_black;
 }
 
+input:focus {
+    border-color: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none;
+}
+
 header div {
 	background-color: rgba(255, 255, 255, .8);
 	padding: 5px;
@@ -29,4 +36,56 @@ header div {
 
 #right_lower_header {
 	float: right;
+}
+
+#post_container {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+div.post {
+	background-color: rgba(255, 255, 255, .8);
+	width: 500px;
+	float: left;
+	vertical-align: top;
+	margin: 10px;
+	padding: 8px;
+}
+
+.post_title {
+	font-weight: bold;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.post_body {
+	font-family: Helvetica;
+}
+
+.button {
+	background-color: #b1b1b1;
+	display: inline-block;
+	overflow: hidden;
+
+	padding: 4px;
+}
+
+.timestamp {
+	font-family: Helvetica;
+	font-size: 14px;
+	float: right;
+}
+
+.comment_input {
+	border: none;
+	height: 30px;
+	width: 80%;
+}
+
+.comment {
+	float: right;
+}
+
+.dividing_group {
+	margin-bottom: 5px;
 }

@@ -6,6 +6,8 @@ Meteor.startup(function () {
 	$('#top').css('padding','5px 10px');
 	$('#starred').css('padding','5px 10px');
 	$('#present_submit_dialog').css('padding', '5px 10px');
+	$('#present_moderator_view').css('padding', '5px 10px');
+	$('#present_submit_dialog').css('padding', '5px 10px');
 });
 
 Template.post_list.posts = function () {

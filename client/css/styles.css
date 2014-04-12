@@ -39,7 +39,7 @@ input:focus {
 }
 
 #present_submit_dialog, #present_moderator_view {
-	float: right;
+	/*float: right;*/
 }
 
 #title {
@@ -59,11 +59,18 @@ header span {
 }
 
 #upper_header {
-	font-size: 20px;
+	/*font-size: 20px;*/
+}
+
+#left_upper_header {
+	float: left;
+}
+
+#right_upper_header {
+	float: right;
 }
 
 #lower_header {
-	font-size: 25 px;
 	overflow: auto;
 }
 

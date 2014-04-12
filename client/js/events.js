@@ -32,6 +32,10 @@ Template.header.events = {
 
 Template.submit_dialog.events = {
 	'click div.submit': function (event, template) {
+		if (!template.find('#submission_body').value.length) {
+			alert('You cannot send an empty confession!');
+			return false;
+		}
 		Posts.insert({
 			post_number: Posts.find().count() + 1,
 			body: template.find('#submission_body').value,
@@ -47,6 +51,9 @@ Template.submit_dialog.events = {
 		$('#submit_dialog').hide();
 
 		template.find('#submission_body').value = '';
+	},
+	'click div.exit_button': function(event,template) {
+		$('#submit_dialog').hide();
 	}
 };
 

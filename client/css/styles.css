@@ -30,7 +30,7 @@ input:focus {
 	background-color: #b1b1b1 !important;
 	font-family: old_sans_black !important;
 	color: black !important;
-	font-size: 18px !important;
+	font-size: 15px !important;
 }
 
 #present_submit_dialog {
@@ -53,7 +53,7 @@ header span {
 }
 
 #lower_header {
-	font-size: 18px;
+	font-size: 25 px;
 	overflow: auto;
 }
 
@@ -66,13 +66,13 @@ header span {
 }
 
 #post_container {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 20%;
+	margin-right: 15%;
 }
 
 div.post {
 	background-color: rgba(255, 255, 255, .8);
-	width: 500px;
+	width: 40%;
 	float: left;
 	vertical-align: top;
 	margin: 10px;

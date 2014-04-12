@@ -1,4 +1,4 @@
 Meteor.startup(function () {
-	Meteor.users.update('YL3fXgx9fCAre4bLh', {$set: {is_admin: true}});
-	Meteor.users.update('MQJLRhNPfNRCRJyrc', {$set: {is_admin: true}});
+	Meteor.users.update('ovu5ou6mxB8LjLmMM', {$set: {is_admin: true}});
+	Meteor.users.update('fhDvGjhhrESaKxvs8', {$set: {is_admin: true}});
 });

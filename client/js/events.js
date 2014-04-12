@@ -63,6 +63,10 @@ Template.submit_dialog.events = {
 
 Template.post.events = {
 	'click div.like': function (event, template) {
+		if (!Meteor.user()) {
+			alert('You must be logged in to use this feature!');
+			return false;
+		}
 		if (!_.contains(this.was_liked_by, Meteor.user()._id)) {
 			Posts.update(this._id, {
 				$push: {was_liked_by: Meteor.user()._id},
@@ -79,6 +83,11 @@ Template.post.events = {
 		}
 	},
 	'click div.comment': function (event, template) {
+		if (!Meteor.user()) {
+			alert('You must be logged in to use this feature!');
+			return false;
+		}
+
 		if (!template.find('.comment_input').value.length) {
 			alert('You must comment in order to post a comment!');
 			return false;
@@ -96,6 +105,10 @@ Template.post.events = {
 		template.find('.comment_input').value = '';
 	},
 	'click img.unstarred': function (event, template) {
+		if (!Meteor.user()) {
+			alert('You must be logged in to use this feature!');
+			return false;
+		}
 		if (!_.contains(this.was_starred_by, Meteor.user()._id)) {
 			Posts.update(this._id, {
 				$push: {was_starred_by: Meteor.user()._id}
@@ -135,7 +148,7 @@ Template.post.events = {
 		Posts.update(this._id, {$push: {comments: new_comment}});
 
 		template.find('.comment_input').value = '';
-    		  
+
     }
   }
 };

@@ -11,7 +11,7 @@ body {
 
 h1 {
 	margin: 0;
-	font-size: 40px;
+	font-size: 3em;
 }
 
 a, a:link, a:visited, a:active, a:hover {
@@ -40,7 +40,7 @@ input:focus {
 }
 
 #present_submit_dialog, #present_moderator_view {
-	/*float: right;*/
+	font-size: 22px;
 
 }
 

@@ -96,6 +96,12 @@ Template.post.events = {
 				$pull: {was_starred_by: Meteor.user()._id}
 			});
 		}
+	},
+	'click span.seemore': function (event, template) {
+		template.findAll('.comment_details').each(function (index, element) {
+			$(element).show();
+		});
+		$(template.find('.seemore')).hide();
 	}
 };
 

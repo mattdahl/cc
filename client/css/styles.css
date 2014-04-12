@@ -210,3 +210,8 @@ div.post {
 .reject {
 	background-color: #914545;
 }
+
+.seemore {
+	display: none;
+	cursor: pointer;
+}

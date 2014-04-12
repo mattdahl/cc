@@ -252,8 +252,3 @@ div.post {
 	height: 80px;
 	padding: 1%;
 }
-
-.content_warning_shield > .button {
-	float: right;
-	background-color: transparent;
-}

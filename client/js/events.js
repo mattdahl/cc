@@ -115,7 +115,7 @@ Template.post.events = {
 		});
 		$(template.find('.seemore')).hide();
 	},
-	'click span.show_content': function (event, template) {
+	'click .content_warning_shield': function (event, template) {
 		$(template.find('.content_warning_shield')).hide();
 		$(template.find('.post_content')).show();
 	}

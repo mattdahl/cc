@@ -80,7 +80,7 @@ Template.post.events = {
 	},
 	'click div.comment': function (event, template) {
 		if (!template.find('.comment_input').value.length) {
-			alert('You must post a comment!');
+			alert('You must comment in order to post a comment!');
 			return false;
 		}
 
@@ -118,7 +118,26 @@ Template.post.events = {
 	'click span.show_content': function (event, template) {
 		$(template.find('.content_warning_shield')).hide();
 		$(template.find('.post_content')).show();
-	}
+	},
+	'keypress input.comment_input': function (evt, template) {
+    	if (evt.which === 13) {
+    		if (!template.find('.comment_input').value.length) {
+			alert('You must comment in order to post a comment!');
+			return false;
+		}
+		var new_comment = {
+			body: template.find('.comment_input').value,
+			timestamp: (new Date()).toString().substring(0, 21),
+			user_id: Meteor.user()._id,
+			username: Meteor.user().profile.name
+		};
+
+		Posts.update(this._id, {$push: {comments: new_comment}});
+
+		template.find('.comment_input').value = '';
+    		  
+    }
+  }
 };
 
 Template.moderator_post.events = {
@@ -132,3 +151,4 @@ Template.moderator_post.events = {
 		Posts.remove(this._id);
 	}
 };
+

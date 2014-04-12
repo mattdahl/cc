@@ -19,3 +19,18 @@ Template.submit_dialog.events = {
 		$('#submit_dialog').hide();
 	}
 };
+
+Template.post.events = {
+	'click div.comment': function (event, template) {
+		var new_comment = {
+			body: template.find('.comment_input').value,
+			timestamp: (new Date()).toString().substring(0, 21),
+			user_id: Meteor.user()._id,
+			username: Meteor.user().profile.name
+		};
+
+		console.log(new_comment);
+
+		Posts.update(this._id, {$push: {comments: new_comment}});
+	}
+};

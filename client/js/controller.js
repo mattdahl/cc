@@ -1,6 +1,5 @@
 Meteor.startup(function () {
 	Session.set('current_page', 'latest');
-	/*$('#latest').css('font-size', '22px');*/
 	$('#top').parent().css('background-color', 'transparent');
 	$('#starred').parent().css('background-color', 'transparent');
 	$('#latest').css('padding','10px');

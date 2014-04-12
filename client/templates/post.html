@@ -1,9 +1,27 @@
 <template name="post">
 	<div class="post">
 		<span class="post_title">{{ title }}</span>
-		<br />
-		<span class="post_body">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aspernatur, explicabo, ea amet id non consequatur maxime nisi quis excepturi aliquid aliquam qui quia omnis eligendi alias illum corporis delectus.
-		</span>
+		<div class="dividing_group">
+			<span class="post_body">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aspernatur, explicabo, ea amet id non consequatur maxime nisi quis excepturi aliquid aliquam qui quia omnis eligendi alias illum corporis delectus.
+			</span>
+		</div>
+		<div class="dividing_group">
+			<div class="like button">
+				Like
+			</div>
+			<div class="button">
+				10
+			</div>
+			<div class="timestamp">
+				timestamp
+			</div>
+		</div>
+		<div class="dividing_group">
+			<input type="text" class="comment_input">
+			<div class="comment button">
+				Comment
+			</div>
+		</div>
 	</div>
 </template>

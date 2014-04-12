@@ -133,6 +133,11 @@ Template.post.events = {
 		$(template.find('.post_content')).show();
 	},
 	'keypress input.comment_input': function (evt, template) {
+		if (!Meteor.user()) {
+			alert('You must be logged in to use this feature!');
+			return false;
+		}
+
     	if (evt.which === 13) {
     		if (!template.find('.comment_input').value.length) {
 			alert('You must comment in order to post a comment!');

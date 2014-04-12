@@ -17,6 +17,8 @@ Template.submit_dialog.events = {
 		});
 
 		$('#submit_dialog').hide();
+
+		template.find('#submission_body').value = false;
 	}
 };
 
@@ -29,8 +31,8 @@ Template.post.events = {
 			username: Meteor.user().profile.name
 		};
 
-		console.log(new_comment);
-
 		Posts.update(this._id, {$push: {comments: new_comment}});
+
+		template.find('.comment_input').value = '';
 	}
 };

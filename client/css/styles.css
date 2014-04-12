@@ -5,6 +5,7 @@
 
 body {
 	background-image: url('img/background.png');
+	background-attachment: fixed;
 	font-family: old_sans_black;
 }
 
@@ -146,4 +147,6 @@ div.post {
 	padding: 5px;
 	margin-bottom: 10px;
 	font-family: Helvetica;
+	min-height: 35px;
+	overflow: auto;
 }

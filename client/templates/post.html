@@ -18,15 +18,15 @@
 			</div>
 		</div>
 		<div class="dividing_group">
+			{{#each comments}}
+				{{> comment}}
+			{{/each}}
+		</div>
+		<div class="dividing_group">
 			<input type="text" class="comment_input">
 			<div class="comment button">
 				Comment
 			</div>
-		</div>
-		<div class="dividing_group">
-			{{#each comments}}
-				{{> comment}}
-			{{/each}}
 		</div>
 	</div>
 </template>

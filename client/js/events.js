@@ -59,6 +59,11 @@ Template.post.events = {
 		}
 	},
 	'click div.comment': function (event, template) {
+		if (!template.find('.comment_input').value.length) {
+			alert('You must post a comment!');
+			return false;
+		}
+
 		var new_comment = {
 			body: template.find('.comment_input').value,
 			timestamp: (new Date()).toString().substring(0, 21),

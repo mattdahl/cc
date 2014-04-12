@@ -44,3 +44,7 @@ Template.post.rendered = function () {
 		$(this).parent().find('.seemore').show();
 	}
 };
+
+Template.header.is_admin = function () {
+	return Meteor.user().is_admin;
+};

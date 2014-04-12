@@ -10,6 +10,11 @@ Meteor.startup(function () {
 	$('#present_submit_dialog').css('padding', '5px 10px');
 });
 
+Deps.autorun(function () {
+    Meteor.subscribe('users');
+    Meteor.subscribe('posts');
+});
+
 Template.post_list.posts = function () {
 	switch (Session.get('current_page')) {
 		case 'top':	return Posts.find({}, {sort: {likes: -1, post_number: -1}}); break;

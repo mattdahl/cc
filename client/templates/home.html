@@ -6,5 +6,7 @@
 	{{> header}}
 	{{> post_list}}
 	{{> submit_dialog}}
-	{{> moderator_view}}
+	{{#if currentUser.is_admin}}
+		{{> moderator_view}}
+	{{/if}}
 </body>

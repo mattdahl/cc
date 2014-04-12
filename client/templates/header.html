@@ -5,7 +5,9 @@
 				<span id="title"><h1><a href="#" onclick="window.location.reload(true);">Claremont Confessions</a></h1></span>
 			</span>
 			<span id="right_upper_header">
-				<span id="present_moderator_view" class="button">Moderate</span>
+				{{#if currentUser.is_admin}}
+					<span id="present_moderator_view" class="button">Moderate</span>
+				{{/if}}
 				<span id="present_submit_dialog" class="button">Submit</span>
 			</span>
 		</div>

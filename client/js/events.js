@@ -12,7 +12,7 @@ Template.header.events = {
 	'click span#top': function (event, template) {
 		Session.set('current_page', 'top');
 
-		$('#latest').css('background-color', 'transparent');	
+		$('#latest').css('background-color', 'transparent');
 		$('#top').css('background-color', '#b1b1b1');
 		$('#starred').css('background-color', 'transparent');
 	},

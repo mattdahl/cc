@@ -39,8 +39,9 @@ input:focus {
 
 header > div {
 	background-color: rgba(255, 255, 255, .8);
-	padding: 5px;
-	margin-bottom: 10px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 	overflow: auto;
 }
 
@@ -72,10 +73,10 @@ header span {
 
 div.post {
 	background-color: rgba(255, 255, 255, .8);
-	width: 45%;
+	width: 43%;
 	float: left;
 	vertical-align: top;
-	margin: 10px;
+	margin: 2%;
 	padding: 8px;
 }
 
@@ -111,7 +112,7 @@ div.post {
 .comment_input {
 	border: none;
 	height: 30px;
-	width: 80%;
+	width: 85%;
 }
 
 .comment {

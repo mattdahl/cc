@@ -20,4 +20,13 @@ header div {
 
 #lower_header {
 	font-size: 18px;
+	overflow: auto;
+}
+
+#left_lower_header {
+	float: left;
+}
+
+#right_lower_header {
+	float: right;
 }

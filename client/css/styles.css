@@ -1,0 +1,32 @@
+@font-face {
+	font-family: old_sans_black;
+	src: url('fonts/OldSansBlack.otf');
+}
+
+body {
+	background-image: url('img/background.png');
+	font-family: old_sans_black;
+}
+
+header div {
+	background-color: rgba(255, 255, 255, .8);
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+#upper_header {
+	font-size: 20px;
+}
+
+#lower_header {
+	font-size: 18px;
+	overflow: auto;
+}
+
+#left_lower_header {
+	float: left;
+}
+
+#right_lower_header {
+	float: right;
+}

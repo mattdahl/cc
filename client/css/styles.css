@@ -13,6 +13,11 @@ h1 {
 	margin: 0;
 }
 
+a, a:link, a:visited, a:active, a:hover {
+	text-decoration: none;
+	color: black;
+}
+
 input:focus {
     border-color: none;
     box-shadow: none;

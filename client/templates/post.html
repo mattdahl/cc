@@ -7,11 +7,14 @@
 			</span>
 		</div>
 		<div class="dividing_group">
-			<div class="like button">
+			<div class="unlike button" style="display: {{ has_liked }}">
+				Unlike
+			</div>
+			<div class="like button" style="display: {{ has_liked }}">
 				Like
 			</div>
 			<div class="like_counter">
-				10
+				{{ was_liked_by.length }}
 			</div>
 			<div class="timestamp">
 				{{ timestamp }}

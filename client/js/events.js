@@ -4,21 +4,24 @@ Template.header.events = {
 	},
 	'click span#latest': function (event, template) {
 		Session.set('current_page', 'latest');
-		$(template.find('#latest')).css('font-size', '22px');
-		$(template.find('#top')).css('font-size', '18px');
-		$(template.find('#starred')).css('font-size', '18px');
+
+		$('#latest').parent().css('background-color', '#b1b1b1');
+		$('#top').parent().css('background-color', 'transparent');
+		$('#starred').parent().css('background-color', 'transparent');
 	},
 	'click span#top': function (event, template) {
 		Session.set('current_page', 'top');
-		$(template.find('#latest')).css('font-size', '18px');
-		$(template.find('#top')).css('font-size', '22px');
-		$(template.find('#starred')).css('font-size', '18px');
+
+		$('#latest').parent().css('background-color', 'transparent');	
+		$('#top').parent().css('background-color', '#b1b1b1');
+		$('#starred').parent().css('background-color', 'transparent');
 	},
 	'click span#starred': function (event, template) {
 		Session.set('current_page', 'starred');
-		$(template.find('#latest')).css('font-size', '18px');
-		$(template.find('#top')).css('font-size', '18px');
-		$(template.find('#starred')).css('font-size', '22px');
+
+		$('#latest').parent().css('background-color', 'transparent');
+		$('#top').parent().css('background-color', 'transparent');
+		$('#starred').parent().css('background-color', '#b1b1b1');
 	}
 };
 

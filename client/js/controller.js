@@ -1,6 +1,11 @@
 Meteor.startup(function () {
 	Session.set('current_page', 'latest');
-	$('#latest').css('font-size', '22px');
+	/*$('#latest').css('font-size', '22px');*/
+	$('#top').parent().css('background-color', 'transparent');
+	$('#starred').parent().css('background-color', 'transparent');
+	$('#latest').css('padding','10px');
+	$('#top').css('padding','10px');
+	$('#starred').css('padding','10px');
 });
 
 Template.post_list.posts = function (argument) {

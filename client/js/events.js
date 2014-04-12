@@ -7,7 +7,7 @@ Template.header.events = {
 Template.submit_dialog.events = {
 	'click div.submit': function (event, template) {
 		Posts.insert({
-			post_number: Posts.find().count(),
+			post_number: Posts.find().count() + 1,
 			body: template.find('#submission_body').value,
 			is_approved: false,
 			was_liked_by: [],

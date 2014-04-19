@@ -47,7 +47,7 @@ Template.submit_dialog.events = {
 			comments: [],
 			content_warnings: [],
 			was_starred_by: [],
-			flagged_words: ['foo']
+			flagged_words: []
 		});
 
 		$('#submit_dialog').hide();

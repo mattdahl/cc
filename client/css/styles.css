@@ -253,3 +253,15 @@ div.post {
 	height: 80px;
 	padding: 1%;
 }
+
+#footer {
+	clear: both;
+	margin-left: 35%;
+	width: 387px;
+	padding: 7px;
+	background-color: rgba(255, 255, 255, .8);
+}
+
+#footer > a {
+	color: blue;
+}

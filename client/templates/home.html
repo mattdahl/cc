@@ -5,11 +5,11 @@
 <body>
 	{{> header}}
 	{{> post_list}}
-	{{> footer}}
 	{{> submit_dialog}}
 	{{#if currentUser.is_admin}}
 		{{> moderator_view}}
 	{{/if}}
+	{{> footer}}
 	<div id="blk_background">
 	</div>
 </body>

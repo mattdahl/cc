@@ -13,11 +13,12 @@
 
 		<div class="moderator_details">
 			{{#if flagged_words}}
-				This post contains this sensitive content...
+				This post contains these sensitive words:
 				{{#each flagged_words}}
 					{{ this }},
 				{{/each}}
 			{{/if}}
+			<br />
 			Flag this post as containing... <br />
 			<input type="checkbox"> Profanity <br />
 			<input type="checkbox"> Sexual topics <br />

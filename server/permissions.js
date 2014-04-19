@@ -1,8 +1,3 @@
-Meteor.startup(function () {
-	Meteor.users.update('ovu5ou6mxB8LjLmMM', {$set: {is_admin: true}});
-	Meteor.users.update('fhDvGjhhrESaKxvs8', {$set: {is_admin: true}});
-});
-
 Posts.allow({
 	insert: function (user_id, doc) { // Anyone can submit a post if it's not mangled
 		if (_.isEqual(doc, _.pick(doc, '_id', 'body', 'comments', 'content_warnings', 'flagged_words', 'is_approved', 'likes', 'post_number', 'timestamp', 'was_liked_by', 'was_starred_by'))) {
@@ -10,7 +5,6 @@ Posts.allow({
 		}
 	},
 	update: function (user_id, doc, field_names, modifier) {
-		Meteor._debug(modifier);
 		// If the user is an admin, allow them to update anything
 		if (Meteor.user().is_admin) {
 			return true;
